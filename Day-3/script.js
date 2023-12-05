@@ -34,3 +34,19 @@ Expected:
 Actual:
 "o"
  */ 
+
+// Another way to do it
+
+function findNaughtyStep(original, modified) {
+    for (let i = 0; i < Math.max(original.length, modified.length); i++) {
+     if (original[i] !== modified[i]) {
+       return modified[i];
+     }
+   }
+ 
+   // If one string is a prefix of the other, return the first extra character
+   return original.length < modified.length ? modified[original.length] : "";
+ }
+ 
+ // The output should be "f" but I am getting "o" instead. Why?
+
