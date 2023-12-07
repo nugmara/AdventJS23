@@ -50,3 +50,35 @@ function findNaughtyStep(original, modified) {
  
  // The output should be "f" but I am getting "o" instead. Why?
 
+ //? The Solution
+
+ /**
+ * Find the first different char between two strings.
+ *
+ * @param {string} original - The original string.
+ * @param {string} modified - The modified string.
+ * @return {string} The first difference between the original and modified string.
+ */
+function findNaughtyStep(original, modified) {
+    // We start by declaring the index we will be iterating
+    let i = 0;
+  
+    // While i is less than the sizes of both strings
+    // we go through each one to compare them
+    while (i < original.length || i < modified.length) {
+      // If the char from the original string is different from the char in the modified string,
+      // If they are the same we continue iterating and adding 1 to the index
+  
+      if (original[i] !== modified[i]) {
+        // If the original string has more characters than the modified string,
+        // return the char from the original string.
+        // otherwise, return the char from the modified string
+        return original.length > modified.length ? original[i] : modified[i];
+      }
+  
+      i += 1;
+    }
+  
+    return '';
+  }
+
