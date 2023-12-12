@@ -1,3 +1,5 @@
+// Challenge #5
+
 // Santa 🎅 is testing his new electric sled, the CyberReindeer, on a North Pole road. The road is represented by a string of characters, where:
 
 // . = Road
@@ -33,3 +35,38 @@
 // The result is an array where each element shows the road at each unit of time.
 
 // Take into account that if the sled is in the same position as a barrier, then it takes its place in the array.
+
+function cyberReindeer(road, time) {
+    // Almacena el estado de la carretera en cada unidad de tiempo
+      const roadStates = [road]
+    // Encuentra la posiciónn del trineo (S)
+      let sledPosition = road.indexOf("S")
+    // Cáracter que será reemplazado por el trineo cuando se mueve
+      let replacedChar = "."
+    // Itera por cada unidad de tiempo, menos 1, ya que el estado inicial ua está incluido
+      for (let i = 0; i < times - 1; i++) {
+    // Obtén el estado actual de la carretera
+        let currentPosition = roadStates[i]
+    // En la quinta iteración (unidad de tiempo 5), todas las barreras se abren
+        if (i === 4) {
+          currentPosition = currentPosition.replace(/[|]/g, "*")
+        }
+    // Verifica su la siguiente posición del trineo no es una barrera cerrada
+        if (currentPositon[sledPosition + 1] !== "|") {
+    // Prepara la nueva posición del trineo
+    // Concatenándolo al elemento que anteriormente estaba en esa posición
+          const newSledPosition = `${replacedChar}S`
+    // Actualiza el carácter reemplazado por el trineo antes de ser reemplazado
+        replacedChar = currentPosition[sledPosition + 1];
+    // Construye el nuevo estado de la carretera con el trineo movido una posición
+        const firstPart = currentPosition.substring(0, sledPosition);
+        const lastPart = currentPosition.substring(sledPosition + 2);
+        currentRoadState = firstPart + newSledPosition + lastPart;
+    // Actualiza la posisicón del trineo
+        sledPosition += 1;
+        }
+    // Añade el estado actualizado de la carretera al array
+      roadStates.push(currentPosition)
+      }
+      return roadStates;
+    }
