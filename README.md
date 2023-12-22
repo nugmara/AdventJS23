@@ -1,3 +1,5 @@
+<img src="https://github.com/nugmara/AdventJS23/assets/118689208/65226997-ca1d-42a5-8fde-f0cfd560be93" alt="saint-octocat" width="150px" />
+
 #  ADVENT JavaScript Calendar🎄
 
 Welcome to the ADVENT JavaScript Calendar! This project is a personal collection of daily coding challenges from [adventjs.dev](https://adventjs.dev/) and solutions implemented in JavaScript. The repository serves as a record of personal progress and a space to document insights and comments for better understanding. 
